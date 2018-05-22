@@ -6,6 +6,11 @@ $border: 1px dashed #ddd;
   font-family: 'Hiragino Sans GB', '华文细黑', STHeiti, '微软雅黑',
     'Microsoft YaHei', SimHei, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+body {
+  margin: 0 auto;
+  background-color: #fff;
+  max-width: 414px;
+}
 #app-title {
   text-align: center;
   span {
@@ -29,7 +34,7 @@ $border: 1px dashed #ddd;
 }
 .gift {
   overflow: hidden;
-  box-shadow: 0 1px 4px 1px #ddd;
+  margin-top: 1em;
   h3 {
     text-align: center;
   }
@@ -39,12 +44,32 @@ $border: 1px dashed #ddd;
   .img-wrap {
     height: 0;
     padding-top: 100%;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   h3 + .img-wrap {
     border-top: $border;
   }
   .img-wrap + .img-wrap {
-    border-top: $border;
+    margin-top: 2em;
+    position: relative;
+    &::before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      display:block;
+      top: -1em;
+      border-top: $border;
+    }
   }
+  & + & {
+    border-top: 1px solid #999;
+  }
+}
+.ph-bottom {
+  height: 8em;
+}
+.c-center {
+  text-align: center;
 }

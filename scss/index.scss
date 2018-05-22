@@ -1,0 +1,29 @@
+@import '~normalize.css/normalize.css';
+$border: 1px dashed #ddd;
+
+* {
+  font-family: 'Hiragino Sans GB', '华文细黑', STHeiti, '微软雅黑',
+    'Microsoft YaHei', SimHei, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.gift {
+  overflow: hidden;
+  box-shadow: 0 0 4px 1px #ddd;
+  h3 {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+  .img-wrap {
+    height: 0;
+    padding-top: 100%;
+    background-size: cover;
+  }
+  h3 + .img-wrap {
+    border-top: $border;
+  }
+  .img-wrap + .img-wrap {
+    border-top: $border;
+  }
+}

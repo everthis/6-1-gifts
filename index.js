@@ -17,4 +17,10 @@ function tpl(el, idx) {
 const appHtmlStr = imgs.map(tpl).join('')
 
 const appEle = document.getElementById('app')
+const appTitleEle = document.getElementById('app-title')
+const backToTopEle = document.getElementById('backToTop')
 appEle.innerHTML = appHtmlStr
+
+backToTopEle.addEventListener('click', function(ev) {
+  appTitleEle.scrollIntoView({ block: 'end', behavior: 'smooth' })
+})

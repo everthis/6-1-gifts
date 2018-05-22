@@ -2,13 +2,34 @@
 $border: 1px dashed #ddd;
 
 * {
+  box-sizing: border-box;
   font-family: 'Hiragino Sans GB', '华文细黑', STHeiti, '微软雅黑',
     'Microsoft YaHei', SimHei, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
+#app-title {
+  text-align: center;
+  span {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+}
+#backToTop {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #05a557;
+  color: #fff;
+  padding: 13px;
+  font-size: 12px;
+  text-align: center;
+}
 .gift {
   overflow: hidden;
-  box-shadow: 0 0 4px 1px #ddd;
+  box-shadow: 0 1px 4px 1px #ddd;
   h3 {
     text-align: center;
   }
